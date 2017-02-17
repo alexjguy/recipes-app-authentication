@@ -8,6 +8,10 @@ import {ShoppingListPage} from "../pages/shopping-list/shopping-list";
 import {TabsPage} from "../pages/tabs/tabs";
 import {ShoppingListService} from "../services/shopping-list.service";
 import {RecipesService} from "../services/recipes.service";
+import {SigninPage} from "../pages/signin/signin";
+import {SignupPage} from "../pages/signup/signup";
+import {AuthService} from "../services/auth.service";
+import {DatabaseOptionsPage} from "../pages/database-options/database-options";
 
 @NgModule({
   declarations: [
@@ -16,7 +20,10 @@ import {RecipesService} from "../services/recipes.service";
     RecipePage,
     RecipesPage,
     ShoppingListPage,
-    TabsPage
+    TabsPage,
+    SigninPage,
+    SignupPage,
+    DatabaseOptionsPage
 
   ],
   imports: [
@@ -29,9 +36,12 @@ import {RecipesService} from "../services/recipes.service";
     RecipePage,
     RecipesPage,
     ShoppingListPage,
-    TabsPage
+    TabsPage,
+    SigninPage,
+    SignupPage,
+    DatabaseOptionsPage
 
   ],
-  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler},ShoppingListService,RecipesService]
+  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler},ShoppingListService,RecipesService, AuthService]
 })
 export class AppModule {}
